@@ -1,38 +1,137 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: rgb(53, 23, 93);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.App{
+  position: absolute;
+  top:10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+}
+.App .mainHeading h1{
   text-align: center;
+  margin-top: 20px;
+}
+.App .subHeading h2{
+  text-align: center;
+  margin-top: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.App h1, h2{
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.App .input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(67, 39, 104);
+}
+.App .input{
+  margin-top: 0.8em;
+  width : 20em;
+  height: 2em;
+  display: flex;
+  border-style: solid;
+  border-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+.App .input:hover{
+  border-color: rgb(90, 142, 255);
+}
+.App .input input{
+  width: 100%;
+  height: 1.9em;
+  color: #fff;
+  outline: none;
+  background-color: transparent;
+  border-color: transparent;
+  outline-color: transparent;
+}
+.App i{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: large;
+  font-weight: 900;
+}
+.App i:hover{
+  color: gray;
+}
+.App .toDos{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App .toDos{
+  margin-top: 0.8em;
+  width : 20em;
+  height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 6px;
+  padding: 5px;
+}
+.completed{
+  background-color: rgb(30, 144, 15);
+}
+.notCompleted{
+  background-color: rgb(255, 47, 58);
+}
+.App .toDos .toDo{
+  width: 100%;
+display: inline-flex;
+justify-content: flex-start;
+align-items: center;
+}
+.App .toDos .toDo p{
+  width: 15em;
+  margin-left: 10px;
+  font-size: medium;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(255, 255, 255);
+}
+.App .toDos .toDo .time{
+  width: 5em;
+  font-size:small;
+  font-weight: 200;
+  color: rgb(255, 255, 255);
+}
+.App .toDos .toDo i{
+  float: right;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.buttons .button{
+  width: 6em;
+  height: 2em;
+  background-color: transparent;
+  font-size: large;
+  color: #fff;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  border:none;
+
+}
+.buttons .button:hover{
+  border: solid;
+  border-radius: 5px;
+  border-color: rgb(135, 135, 255);
+}
+.active{
+  border:solid rgb(133, 135, 255) !important;
+  border-radius: 5px;
 }
